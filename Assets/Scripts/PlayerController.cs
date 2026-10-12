@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
         moveInput.y = Input.GetAxis("Vertical");
         moveInput.Normalize();
 
-        RB.velocity = new Vector3(moveInput.x * moveSpeed, RB.velocity.y, moveInput.y * moveSpeed);
+        RB.linearVelocity = new Vector3(moveInput.x * moveSpeed, RB.linearVelocity.y, moveInput.y * moveSpeed);
     }
+
+
 }
