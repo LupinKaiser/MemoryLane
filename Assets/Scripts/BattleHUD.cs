@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-
 public class BattleHUD : MonoBehaviour
 {
 
-    public Slider hpSlider;
+    [SerializeField] HPBar hpBar;
 
-    public void SetHUD(EmotionStats unit)
+    BattleUnit hp;
+
+    public void SetData(BattleUnit enemy)
     {
-        hpSlider.maxValue = unit.maxHealth;
-        hpSlider.value = unit.health;
+        hp = enemy;
+        hpBar.SetHP((float)enemy.Enemy.HP / enemy.Enemy.MaxHP);
     }
 
-    public void SetHP(int hp)
+    public void UpdateHP()
     {
-        hpSlider.value = hp;
+        hpBar.SetHP((float)hp.Enemy.HP / hp.Enemy.MaxHP);
     }
-
 }
+

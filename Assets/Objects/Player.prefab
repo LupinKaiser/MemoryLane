@@ -104,7 +104,6 @@ GameObject:
   - component: {fileID: 344999228977259473}
   - component: {fileID: 9085549331966181615}
   - component: {fileID: 2366093351128814909}
-  - component: {fileID: 2485129140492970956}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -192,19 +191,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RB: {fileID: 9085549331966181615}
   moveSpeed: 15
---- !u!114 &2485129140492970956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4512205236980558723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0711661fa1f03c7478a4aec7136a2f59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EmotionStats
-  Name: Player
-  Level: 1
-  health: 6
-  maxHealth: 6
