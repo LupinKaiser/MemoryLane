@@ -11,16 +11,19 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
     [SerializeField] Camera battleCamera;
 
+
     GameState state;
 
     private void Start()
     {
         playerController.OnEncountered += StartBattle;
         battleSystem.OnBattleOver += EndBattle;
+
     }
 
     void StartBattle()
     {
+        
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
@@ -32,6 +35,7 @@ public class GameController : MonoBehaviour
 
     void EndBattle(bool won)
     {
+        Debug.Log("Battle Ends");
         state = GameState.FreeRoam;
         battleSystem.gameObject.SetActive(false);
         worldCamera.gameObject.SetActive(true);
@@ -43,10 +47,17 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
+
         }
         else if (state == GameState.Battle)
         {
             battleSystem.HandleUpdate();
         }
+
+       
+
     }
+
+    
+
 }

@@ -15,4 +15,4 @@ MonoBehaviour:
   moveName: Boost
   description: Add damage to next attack.
   enemyType: 3
-  damage: 1
+  damage: 0

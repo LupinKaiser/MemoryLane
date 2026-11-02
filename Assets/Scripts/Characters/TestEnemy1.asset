@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: TestEnemy1
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBase
   Sprite: {fileID: -9095717837082945937, guid: 311ddb5d09a9a8644bfecca0d2585c79, type: 3}
-  type: 0
-  name: Enemy1
+  type: 4
+  Unitname: Fury
   Level: 1
   health: 10
   maxHealth: 10
+  damage: 2
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 1c6f771c1dd9324489a55487e31fbe89, type: 2}
+    moveType: 4
     level: 0
   - moveBase: {fileID: 11400000, guid: e4471ebdd73247e42b918e244efc4de4, type: 2}
+    moveType: 3
     level: 0

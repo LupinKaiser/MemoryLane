@@ -9,7 +9,7 @@ public class BattleUnit : MonoBehaviour
     [SerializeField] int level;
     [SerializeField] bool isPlayerUnit;
 
-
+   
     public Enemy Enemy;
 
     public void Setup()

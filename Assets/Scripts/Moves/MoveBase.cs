@@ -11,7 +11,7 @@ public class MoveBase : ScriptableObject
     [SerializeField] string description;
 
     [SerializeField] EnemyBase.EmoType enemyType;
-    [SerializeField] int damage;
+    
  
 
     public string Name {
@@ -26,8 +26,6 @@ public class MoveBase : ScriptableObject
         get { return enemyType; }
     }
 
-    public int Damage {
-        get { return damage; }
-    }
+    
 
 }

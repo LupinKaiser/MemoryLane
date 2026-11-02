@@ -31,6 +31,12 @@ public class BattleDialogBox : MonoBehaviour
         }
     }
 
+    // Add this method to change text instantly without typing:
+    public void UpdateDialogText(string text)
+    {
+        dialogText.text = text;
+    }
+
     public void EnableDialogText(bool enabled)
     {
         dialogText.enabled = enabled;

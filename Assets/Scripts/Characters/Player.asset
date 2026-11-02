@@ -13,11 +13,22 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBase
   Sprite: {fileID: 7482667652216324306, guid: bbf86cd20ef9efe44b2d87284a5dae65, type: 3}
-  type: 0
-  name: Player
+  type: 6
+  Unitname: Player
   Level: 1
   health: 10
   maxHealth: 10
+  damage: 5
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: 1c6f771c1dd9324489a55487e31fbe89, type: 2}
+    moveType: 0
+    level: 0
+  - moveBase: {fileID: 11400000, guid: e4471ebdd73247e42b918e244efc4de4, type: 2}
+    moveType: 3
+    level: 0
+  - moveBase: {fileID: 11400000, guid: 1c4c0b1e4e4f44c44beee4968a9e4e6c, type: 2}
+    moveType: 4
+    level: 0
+  - moveBase: {fileID: 11400000, guid: e13dfe137b923974497448d0518ef488, type: 2}
+    moveType: 2
     level: 0

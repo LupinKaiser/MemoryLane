@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.ProjectAuditor.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,41 +10,21 @@ public class EnemyBase : ScriptableObject
 
     [SerializeField] EmoType type;
 
-    public new string name;
+    public string Unitname;
     [SerializeField] public int Level;
 
     [SerializeField] public int health;
     [SerializeField] public int maxHealth;
+    [SerializeField] public int damage;
 
-    int Love;
-    int Joy;
-    int Sadness;
-    int Anger;
-    int Suprise;
-    int Fear;
+    
 
     [SerializeField] List<LearnableMove> learnableMoves;
 
     // Start is called before the first frame update
     void Start()
     {
-        Love = Random.Range(1, 6);
-        Joy = Random.Range(1, 6);
-        Sadness = Random.Range(1, 6);
-        Anger = Random.Range(1, 6);
-        Suprise = Random.Range(1, 6);
-    }
-
-    public bool TakeDamage()
-    {
-        int damage = Anger;
-
-        health -= damage;
-
-        if (health <= 0)
-            return true;
-        else
-            return false;
+        
     }
 
     public enum EmoType
@@ -55,12 +34,13 @@ public class EnemyBase : ScriptableObject
         Love,
         Joy,
         Fear,
-        Suprise
+        Suprise,
+        None
     }
 
     public string Name
     {
-        get { return name; }
+        get { return Unitname; }
     }
 
     public Sprite BackSprite
@@ -71,6 +51,11 @@ public class EnemyBase : ScriptableObject
     public int MaxHp
     {
         get { return maxHealth; }
+    }
+
+    public int Damage
+    {
+        get { return damage; }
     }
 
     public EmoType Type
@@ -89,6 +74,7 @@ public class EnemyBase : ScriptableObject
     public class LearnableMove
     {
         [SerializeField] MoveBase moveBase;
+        [SerializeField] EmoType moveType;
         [SerializeField] int level;
 
         public MoveBase Base
@@ -100,5 +86,11 @@ public class EnemyBase : ScriptableObject
         {
             get { return level; }
         }
+
+        public EmoType EmoType 
+        { 
+            get { return moveType; }
+        }
+
     }
 }
